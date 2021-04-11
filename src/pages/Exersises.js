@@ -18,10 +18,10 @@ class Exersises extends React.Component {
                 <Welcome
                 username='JD'
                 />
+                <ButtonComponent />
                 <ExerciseComponent
                     exercises={this.state.data}
                 />
-                <ButtonComponent />
             </div>
         )
     }
