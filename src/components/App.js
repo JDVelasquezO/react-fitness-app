@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ExerciseNew from '../pages/ExerciseNew';
+import ExerciseNewContainer from '../pages/ExerciseNewContainer';
 import Exersises from '../pages/Exersises';
 import NotFound from '../pages/NotFound';
 
@@ -9,7 +9,7 @@ function App() {
         <BrowserRouter>
             <Switch>
                 <Route exact path='/exercise' component={Exersises} />
-                <Route exact path='/exercise/new' component={ExerciseNew} />
+                <Route exact path='/exercise/new' component={ExerciseNewContainer} />
                 <Route component={NotFound} />
             </Switch>
         </BrowserRouter>

@@ -45,7 +45,7 @@ class Exersises extends React.Component {
             return <Error />
 
         return (
-            <div>
+            <React.Fragment>
                 <Welcome
                 username='JD'
                 />
@@ -53,7 +53,7 @@ class Exersises extends React.Component {
                 <ExerciseComponent
                     exercises={this.state.data}
                 />
-            </div>
+            </React.Fragment>
         )
     }
 }
