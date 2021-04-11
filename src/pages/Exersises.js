@@ -1,22 +1,27 @@
 import React from 'react'
-import CardComponent from '../components/CardComponent';
+import ExerciseComponent from '../components/ExerciseComponent';
 import Welcome from '../components/WelcomeComponent';
+import ButtonComponent from '../components/ButtonComponent';
+import Data from '../res/data.json';
 
 class Exersises extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            data: Data
+        }
+    }
+
     render () {
         return (
             <div>
                 <Welcome
                 username='JD'
                 />
-            
-                <CardComponent 
-                title='Guías Tecnicas'
-                description='Parrafo de prueba que dice cualquier cosa'
-                img='https://firebasestorage.googleapis.com/v0/b/tutoriales-e4830.appspot.com/o/exercise.png?alt=media&token=b9c4b236-16a9-4a56-bba2-90c9660a0f06'
-                leftColor='#A74CF2'
-                rightColor='#617BFB'
+                <ExerciseComponent
+                    exercises={this.state.data}
                 />
+                <ButtonComponent />
             </div>
         )
     }
